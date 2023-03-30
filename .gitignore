@@ -1,4 +1,4 @@
 # 项目排除路径
 /out/
 /target/
-/src/test/
+/backend/src/test/
