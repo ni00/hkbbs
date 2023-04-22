@@ -1,14 +1,14 @@
 import { createRouter, createWebHashHistory, RouterOptions, Router, RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
-//  { path: '/', name: 'Home', component: () => import('@/views/Home.vue') },
-
+    { path: '/', name: 'Admin', component: () => import('../pages/Admin.vue') },
+    { path: '/login', name: 'Login', component: () => import('../pages/Login.vue') },
 ]
 
 // RouterOptions是路由选项类型
 const options: RouterOptions = {
- history: createWebHashHistory(),
- routes,
+    history: createWebHashHistory(),
+    routes,
 }
 
 // Router是路由对象类型

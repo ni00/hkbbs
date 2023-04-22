@@ -1,13 +1,11 @@
 <script setup lang="ts">
+import { RouterView } from 'vue-router';
+
 
 </script>
 
 <template>
-  <div>
-    admin
-  </div>
+  <RouterView></RouterView>
 </template>
 
-<style scoped lang="less">
-
-</style>
+<style scoped lang="less"></style>
