@@ -1,7 +1,8 @@
 <template>
     <el-scrollbar>
         <el-menu>
-            <el-menu-item class="mynav" v-for="item in list" :key="item.id" @click="handleClick(item)">
+            <el-menu-item class="mynav" v-for="item in props.list" :key="item.id"
+                :class="{ 'nav-selected': item.id === selected }" @click="handleClick(item)">
                 <el-icon v-if="item.icon">
                     <component :is="item.icon"></component>
                 </el-icon>
@@ -12,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
 
 export interface nav_type {
     id: string
@@ -20,13 +21,15 @@ export interface nav_type {
     icon: string
 }
 
-defineProps<{
+const props = defineProps<{
     list: nav_type[]
 }>()
 
+const selected: Ref<string> = ref(props.list[0].id)
 const emit = defineEmits(["switchNav"])
 
 const handleClick = (e: nav_type) => {
+    selected.value = e.id
     emit("switchNav", e)
 }
 </script>
@@ -49,5 +52,9 @@ const handleClick = (e: nav_type) => {
         padding-left: 5px;
         font-size: large;
     }
+}
+
+.nav-selected {
+    background-color: rgb(241, 255, 255);
 }
 </style>
