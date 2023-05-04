@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, ref } from 'vue';
+import { defineProps, ref ,Ref } from 'vue';
 
 export interface nav_type {
     id: string
