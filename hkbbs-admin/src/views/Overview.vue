@@ -1,11 +1,11 @@
+<template>
+    <div>
+        <h1>overview</h1>
+    </div>
+</template>
+
 <script setup lang="ts">
 
 </script>
-
-<template>
-    <div>
-
-    </div>
-</template>
 
 <style lang="less" scoped></style>

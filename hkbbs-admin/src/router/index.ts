@@ -1,8 +1,11 @@
 import { createRouter, createWebHashHistory, RouterOptions, Router, RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
-    { path: '/', name: 'Admin', component: () => import('../pages/Admin.vue') },
-    { path: '/login', name: 'Login', component: () => import('../pages/Login.vue') },
+    { path: '/overview', name: 'Overview', component: () => import('../views/Overview.vue') },
+    { path: '/data', name: 'Data', component: () => import('../views/Data.vue') },
+    { path: '/notice', name: 'Notice', component: () => import('../views/Notice.vue') },
+    { path: '/post', name: 'Post', component: () => import('../views/Post.vue') },
+    { path: '/user', name: 'User', component: () => import('../views/User.vue') }
 ]
 
 // RouterOptions是路由选项类型

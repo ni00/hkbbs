@@ -1,0 +1,27 @@
+[
+    {
+        "id": "overview",
+        "title": "总览",
+        "icon": "Guide"
+    },
+    {
+        "id": "user",
+        "title": "用户",
+        "icon": "User"
+    },
+    {
+        "id": "notice",
+        "title": "通知",
+        "icon": "ChatDotRound"
+    },
+    {
+        "id": "post",
+        "title": "帖子",
+        "icon": "Document"
+    },
+    {
+        "id": "data",
+        "title": "数据",
+        "icon": "MessageBox"
+    }
+]

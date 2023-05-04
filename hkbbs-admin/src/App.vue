@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-
-
+import Admin from "./pages/Admin.vue"
 </script>
 
 <template>
-  <RouterView></RouterView>
+  <Admin></Admin>
 </template>
 
 <style scoped lang="less"></style>
