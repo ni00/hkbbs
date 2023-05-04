@@ -2,7 +2,7 @@
     <el-scrollbar>
         <el-menu>
             <el-menu-item class="mynav" v-for="item in list" :key="item.id" @click="handleClick(item)">
-                <el-icon>
+                <el-icon v-if="item.icon">
                     <component :is="item.icon"></component>
                 </el-icon>
                 <span class="mynav-title">{{ item.title }}</span>
@@ -24,10 +24,10 @@ defineProps<{
     list: nav_type[]
 }>()
 
-const emit = defineEmits(["switch"])
+const emit = defineEmits(["switchNav"])
 
 const handleClick = (e: nav_type) => {
-    emit("switch", e)
+    emit("switchNav", e)
 }
 </script>
 

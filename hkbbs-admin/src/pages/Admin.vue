@@ -3,7 +3,7 @@
         <MyHeader :admin="user_name" :title="current_view.title"></MyHeader>
         <el-container class="panel">
             <el-aside class="panel-nav" width="200px">
-                <MyNav :list="nav_list" @switch="handleSwitch"></MyNav>
+                <MyNav :list="nav_list" @switchNav="handleSwitch"></MyNav>
             </el-aside>
             <el-container class="panel-main">
                 <el-main class="panel-view">
@@ -22,7 +22,7 @@ import { useRouter } from 'vue-router'
 import MyNav, { nav_type } from '../components/MyNav.vue'
 import MyHeader from '../components/MyHeader.vue'
 import MyLogin from '../components/MyLogin.vue'
-import nav_list from '../assets/nav-list.json'
+import nav_list from '../assets/NavList.json'
 
 
 // 控制台视图切换
@@ -39,8 +39,13 @@ watch(current_view, (val: nav_type) => {
 
 
 // 无token信息，打开登录Dialog
-let user_name: string = ""
-const firstLogin: Ref<boolean> = ref(true)
+let user_name: Ref<string> = ref("")
+let token: string = ""
+const firstLogin: Ref<boolean> = ref(false)
+
+if (token === "" || token === null) {
+    firstLogin.value = true
+}
 
 const handleLogin = (e: any) => {
     // TODO:登录操作，获取token
@@ -49,7 +54,9 @@ const handleLogin = (e: any) => {
     firstLogin.value = false
 }
 
-
+// 测试需要
+firstLogin.value = false
+user_name.value = "jack"
 
 
 </script>
