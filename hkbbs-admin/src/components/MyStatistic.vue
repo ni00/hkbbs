@@ -2,7 +2,7 @@
     <el-statistic class="my-stat" :value="first_num">
         <template #title>
             <div style="display: inline-flex; align-items: center">
-                {{ title }}
+                <span class="title_text">{{ title }}</span>
                 <el-icon v-if="title_icon" style="margin-left: 4px" :size="12">
                     <component :is="title_icon"></component>
                 </el-icon>

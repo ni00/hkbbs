@@ -38,12 +38,18 @@ declare module '@vue/runtime-core' {
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     Header: typeof import('./src/components/Header.vue')['default']
+    MyCharts: typeof import('./src/components/MyCharts.vue')['default']
     MyHeader: typeof import('./src/components/MyHeader.vue')['default']
+    MyList: typeof import('./src/components/MyList.vue')['default']
     MyLogin: typeof import('./src/components/MyLogin.vue')['default']
     MyNav: typeof import('./src/components/MyNav.vue')['default']
+    MyStackedChart: typeof import('./src/components/MyStackedChart.vue')['default']
     MyStatistic: typeof import('./src/components/MyStatistic.vue')['default']
     NavItem: typeof import('./src/components/NavItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+  }
+  export interface ComponentCustomProperties {
+    vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']
   }
 }

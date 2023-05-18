@@ -7,12 +7,23 @@
             </el-aside>
             <el-container class="panel-main">
                 <el-main class="panel-view">
-                    <RouterView></RouterView>
+                    <KeepAlive>
+                        <Suspense>
+                            <RouterView></RouterView>
+                            <!-- 加载中状态 -->
+                            <template #fallback>
+                                正在加载...
+                            </template>
+                        </Suspense>
+                    </KeepAlive>
                 </el-main>
             </el-container>
         </el-container>
     </template>
-    <MyLogin v-if="firstLogin" @login="handleLogin"></MyLogin>
+
+    <Teleport to="body">
+        <MyLogin v-if="firstLogin" @login="handleLogin"></MyLogin>
+    </Teleport>
 </template>
   
 <script lang="ts" setup>
