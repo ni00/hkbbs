@@ -5,14 +5,14 @@
         "icon": "Guide"
     },
     {
-        "id": "user",
-        "title": "用户",
-        "icon": "User"
-    },
-    {
         "id": "notice",
         "title": "通知",
         "icon": "ChatDotRound"
+    },
+    {
+        "id": "user",
+        "title": "用户",
+        "icon": "User"
     },
     {
         "id": "post",
